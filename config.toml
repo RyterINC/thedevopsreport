@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "http://thedevopsreport.com"
 languageCode = "en-us"
 title = "The DevOps Report"
 theme = "hugo-future-imperfect"
@@ -31,7 +31,7 @@ canonifyURLs = true
   # Sets Categories to sort by number of posts instead of alphabetical
   categoriesByCount    = true
   # set to show or to hide categories in the sidebar
-  showSidebarCategories = true
+  showSidebarCategories = false
   # Sets Estimated Reading Time to appear in post headers
   includeReadingTime   = true
   # Sets the Favicon and Version for the site. Default support is for
@@ -45,12 +45,12 @@ canonifyURLs = true
   # Sets specific share to appear on posts (default behavior is to appear)
   socialShareTwitter   = false
   socialShareGoogleplus = false
-  socialShareFacebook  = true
+  socialShareFacebook  = false
   socialShareReddit    = false
-  socialShareLinkedin  = true
+  socialShareLinkedin  = false
   socialShareStumbleupon = false
   socialSharePinterest = false
-  socialShareEmail     = true
+  socialShareEmail     = false
 
   # Load custom CSS or JavaScript files. The variable is an array so that you
   # can load multiple files if necessary. You can also load the standard theme
@@ -89,7 +89,7 @@ canonifyURLs = true
 [params.intro]
   header    = "welcome to my blog"
 
-  paragraph = "I've dedicated this site to documenting my experiences and use cases with the tools and skillsets I've learned in this rapidly growing field."
+  paragraph = ""
 
   about     = "I have been working in DevOps professionally since 2015 and by no means am I a master at my craft, but I feel as though free information is the building blocks that hold up our society and will help us grow. In a field like DevOps where our numbers are few, that information can be the difference between success and failure. I hope I can share some info with you that you can use for the benefit of your business and your own self development."
 
@@ -151,9 +151,9 @@ canonifyURLs = true
 # and socialAppearAtBottom.
 [social]
   # Coding Communities
-  github           = "jpescador/hugo-future-imperfect"
+  github           = "ryterinc"
   gitlab           = ""
-  stackoverflow    = "" # User Number
+  stackoverflow    = "2913068" # User Number
   bitbucket        = ""
   jsfiddle         = ""
   codepen          = ""
@@ -166,17 +166,17 @@ canonifyURLs = true
   wordpress        = ""
   medium           = ""
   # Professional/Business Oriented Communities
-  linkedin         = "example"
+  linkedin         = "https://www.linkedin.com/in/jayson-ryter-383348123"
   #linkedin_company = "examplebusiness"
   foursquare       = ""
   xing             = ""
   slideshare       = ""
   # Social Networks
-  facebook         = "example"
+  facebook         = "techandfit"
   #googleplus       = ""
   #reddit           = "example"
   #quora            = ""
-  youtube          = "example"
+  youtube          = ""
   #vimeo            = ""
   #whatsapp         = "" # WhatsApp Number
     # WeChat and QQ need testing.
@@ -184,7 +184,7 @@ canonifyURLs = true
     qq             = "" # User ID Number
   #instagram        = "example"
   #tumblr           = ""
-  twitter          = "example"
+  twitter          = "https://twitter.com/ryterinc"
   #skype            = ""
   #snapchat         = ""
   #pinterest        = "example"
@@ -194,4 +194,5 @@ canonifyURLs = true
   #orcid            = ""
   #researchgate     = "example"
   # Email
-  email            = "example"
+  email            = ""
+  #twitch           = "https://twitch.tv/ryterinc"
