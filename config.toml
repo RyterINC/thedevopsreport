@@ -17,7 +17,7 @@ canonifyURLs = true
   # Sets the navbarTitle that appears in the top left of the navigation bar
   navbarTitle          = "The DevOps Report"
   # Sets where "View More Posts" links
-  viewMorePostLink     = "/blog/"
+  # viewMorePostLink     = "/blog/"
 
 # Optional Params
   # Sets navbarTitle to match the section of the website
@@ -96,7 +96,7 @@ canonifyURLs = true
   # This appears at the top of the sidebar above params.intro.header.
   # A width of less than 100px is recommended from a design perspective.
   [params.intro.pic]
-    src       = "https://s3.amazonaws.com/thedevopsreport.com/images/avatar.jpg"
+    src       = "https://s3.amazonaws.com/thedevopsreport.com/images/Face_pic.jpg"
     # Sets Image to be a cirlce
     circle    = false
     # Sets Image to be Future Imperfect's hexagon
@@ -116,11 +116,11 @@ canonifyURLs = true
   identifier = "fa fa-home"
   weight = 1
 
-#[[menu.main]]
-#  name = "About"
-#  url = "/about/"
-#  identifier = "fa fa-id-card-o"
-#  weight = 2
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  identifier = "fa fa-id-card-o"
+  weight = 2
 
 [[menu.main]]
   name = "Blog"
