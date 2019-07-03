@@ -25,21 +25,21 @@ my configurations were easier to manage, and using it was easier than expected. 
  By the end of this tutorial, you will be able to do the following: 
 
 - Pull images from a repo and run containers
-- Package an app into a container using a Dockerfile and publish to a registry
-- Use docker-compose to spin up multiple containers at once
+- Package an app into a container using a Dockerfile
+- Publish a container to a registry
 
 These three things were the building blocks that got me started on my path with Docker. There are a lot of Docker tutorials out there so I'm going to skip a lot of the fluff
-and give you the info which I think is most relevant to get you started using Docker as quick as possible. Everything we do will also be in my public github located here
+and give you the info which I think is most relevant to get you started using Docker as quick as possible.
 
 # Our Environment
 For this lab I will be using the **Centos7** OS installed on **Virtualbox**. Everything we will be doing 
 will be OS agnostic for maybe the exception of some commands that are translated differently if you are not using Centos as your OS. I will also be using a user with sudo privileges and not the root
 account. I think it is important to realize what commands and actions you can execute without sudo and vice versa in regards to docker. 
 
-Let's make sure we have Docker installed first...
-
 **All files for this lab can be found in my public git repo:**
 https://github.com/RyterINC/docker-getting-started
+
+Let's make sure we have Docker installed first...
 
 Docker already has documentation on the process which can be found [here](https://docs.docker.com/install/linux/docker-ce/centos/), but I have included in the root of our repo a script 
 called `install-docker.sh` that will install Docker and docker-compose for you. I encourage you to go through these commands and understand what is happening under the hood.
@@ -135,15 +135,15 @@ terminal. This can be useful for debugging or better understanding of what's hap
 
 The last new content we introduced was the image tag that we specified. For this image, we told the dockerhub that we wanted the image with the tag `stable-alpine`.If that image exists in the Nginx dockerhub repo, then 
 it would be pulled by our docker daemon. If you want to see what images Nginx has available, you can visit their repo [here](https://hub.docker.com/_/nginx?tab=tags). I encourage you to find some other docker images of 
-software you might use and install them via docker. Instead of having to do a full install and configure, you can run a container instead and take ten extra minutes for lunch. 
+software you might use and install them via docker instead of having to do a full install and configure. Instead, you could run a container and take ten extra minutes for lunch. 
 
 # Packaging A Container
 
-So now that we have pulled an pre-built image and have gotten a small taste of docker, let's build our own image and see if we can host an app inside. In my humble opinion, packaging an app with a `Dockerfile` is the 
-biggest barrier to entry for most people. Luckily for us, there are a ton of examples on the web on how to do this already and we will be using a simple flask app in order to accomplish our task.
+So now that we have pulled a pre-built image and have gotten a small taste of docker, let's build our own image and see if we can host an app inside. In my humble opinion, packaging an app with a `Dockerfile` is the 
+biggest barrier to entry for most people. Luckily for us, there are a ton of examples on the web on how to do this in case this isn't clear to you. We will be using a simple flask app in order to accomplish our task.
 
-In our [docker-getting-started](https://github.com/RyterINC/docker-getting-started) repo I have included a script called `hello.py` (our flask app) and a `Dockerfile`. Since we installed virtualenv on our system, let's go ahead 
-and create a virtualenv so we can run our app and see what it looks like. 
+In our [docker-getting-started](https://github.com/RyterINC/docker-getting-started) repo I have included a script called `hello.py` (our flask app) and a `Dockerfile`. Let's go ahead and create a virtualenv
+so we can run our app and see what it looks like. You can find instructions on how to install virtualenv [here]()
 
 ```
 virtualenv .flaskenv 
@@ -259,8 +259,8 @@ That's great and all, but remember, just because an image builds doesn't mean th
 
 `docker run -p 5000:5000 -d --name flaskapp docker-getting-started:latest`
 
-In a nutshell, we are executing a `docker run` to create a container from the image `docker-getting-started:latest` that we have included in our command at the end. The `-p 5000:5000` 
-means we port forward port 5000 on the container to port 5000 on the host. `-d` stands for detached, which simply means the container runs in the background, and last but not least we name our container. 
+In a nutshell, we are executing a `docker run` to create a container from the image `docker-getting-started:latest` that we have included in our command at the end of the line. The `-p 5000:5000` 
+means we port forward port 5000 on the container to port 5000 on the host and as before we use `-d` to run in detached mode. Last but not least we name our container `flaskapp` so we can reference it easily. 
 Here's what it looks like: 
 
 ```
@@ -278,7 +278,7 @@ And just like that our app is up and running. If you go to the address you used 
 
 Now that we have a working image that can run a working container, let's push it to a repo
 
-go to [docker hubs website](https://hub.docker.com/) and create an account. Once you do that, run `docker login` on your terminal. We then need to `docker tag` our image in order to associate it with our account. 
+go to [docker hubs website](https://hub.docker.com/) and create an account. Once you do that, run `docker login` on your terminal and log in with your dockerhub creds. We then need to `docker tag` our image in order to associate it with our account. 
 
 `docker tag docker-getting-started:latest ryterinc/docker-getting-started:latest`
 "ryterinc" in this case is my dockerhub username, you would replace this with yours.
@@ -330,11 +330,10 @@ CONTAINER ID        IMAGE                                    COMMAND            
 019b66c8bd72        ryterinc/docker-getting-started:latest   "python hello.py"   17 seconds ago      Up 16 seconds       0.0.0.0:5000->5000/tcp   boring_wing
 ```
 
-# TLDR
+# In Conclusion
 
 In this lesson, we were able to run a docker container from docker hub, package our own app, run that app in a container, and publish that container to dockerhub to use it ourselves. Docker has allowed us to 
-package an application and its dependencies into an easy to run process that is able to run in one command. From here, I encourage you to try and package more complex images, as well as research and try to understand 
-any concepts you didn't quite understand. There is a lot more information to cover and in the next lessons for docker it only builds on what we already know. Go forth and package all the things!
+package an application and its dependencies into an easy to run process that is able to run in one command. This was a pretty quick lesson and it only skims the surface of docker. I encourage you to try and package more complex images, as well as research any concepts you didn't quite understand. Go forth and package all the things!
 
 
 
