@@ -126,7 +126,7 @@ since this is the first time we have tried running a container from this image, 
 we have added the `-p` option which allows a container to publish a port to the host. This is a bit confusing however, as the layout is host port, then container port. In our example we specify port 8080 on the host 
 to connect to port 80 on the container. Since Nginx publishes content to port 80 which is an http port, we can forward that content to 8080 on the host and our Nginx page will be reachable.
 
-![alt text](https://s3.amazonaws.com/thedevopsreport.com/images/docker-getting-started/nginx-port-example.PNG "ngxinx-port-example")
+![alt text](https://ryterincsitesimages.s3.amazonaws.com/thedevopsreport/docker-getting-started-imgs/nginx-port-example.PNG "ngxinx-port-example")
 
 Since I am using a bridged NAT type for my virtualbox setup, I can view my container by connecting to my VM's IP address at the port we specified for Nginx to forward to and as you can see from the image above we were successfully able to reach our Nginx page that is running in docker. Cool stuff huh?
 
@@ -162,7 +162,7 @@ If you are having issues connecting to your app, ensure your firewall is either 
 
 If everything has gone well, you should be able to see our app running by accessing your VM's IP or hostname followed by port 5000. 
 
-![alt text](https://s3.amazonaws.com/thedevopsreport.com/images/docker-getting-started/flask-app-docker-tutorial.PNG "flask-app-docker-tutorial")
+![alt text](https://ryterincsitesimages.s3.amazonaws.com/thedevopsreport/docker-getting-started-imgs/flask-app-docker-tutorial.PNG "flask-app-docker-tutorial")
 
 Since the app works, let's take a look at the Dockerfile:
 
