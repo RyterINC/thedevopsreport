@@ -43,11 +43,11 @@ canonifyURLs = true
   # Sets Social Share links to appear on posts
   socialShare          = true
   # Sets specific share to appear on posts (default behavior is to appear)
-  socialShareTwitter   = false
+  socialShareTwitter   = true
   socialShareGoogleplus = false
-  socialShareFacebook  = false
-  socialShareReddit    = false
-  socialShareLinkedin  = false
+  socialShareFacebook  = true
+  socialShareReddit    = true
+  socialShareLinkedin  = true
   socialShareStumbleupon = false
   socialSharePinterest = false
   socialShareEmail     = false
