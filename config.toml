@@ -1,4 +1,4 @@
-baseurl = "http://thedevopsreport.com"
+baseurl = "/"
 languageCode = "en-us"
 title = "The DevOps Report"
 theme = "hugo-future-imperfect"
@@ -96,12 +96,12 @@ canonifyURLs = true
   # This appears at the top of the sidebar above params.intro.header.
   # A width of less than 100px is recommended from a design perspective.
   [params.intro.pic]
-    src       = "https://s3.amazonaws.com/thedevopsreport.com/images/Face_pic.jpg"
+    src       = "https://ryterincsitesimages.s3.amazonaws.com/thedevopsreport/Face_pic.jpg"
     # Sets Image to be a cirlce
-    circle    = false
+    circle    = true
     # Sets Image to be Future Imperfect's hexagon
     imperfect = false
-    width     = "180"
+    width     = "200"
     alt       = "Jayson Ryter"
 
 [params.postAmount]
@@ -184,7 +184,7 @@ canonifyURLs = true
     qq             = "" # User ID Number
   #instagram        = "example"
   #tumblr           = ""
-  twitter          = "https://twitter.com/ryterinc"
+  twitter          = "ryterinc"
   #skype            = ""
   #snapchat         = ""
   #pinterest        = "example"

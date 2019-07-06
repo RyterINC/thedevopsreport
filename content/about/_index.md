@@ -4,7 +4,7 @@ date = "05/29/2019"
 +++
 
 ## Who are you? 
-My name is Jayson, I have been working in Devops and Software development for a little over 5 years (at the time of this writing anyways...)
+My name is Jayson, I have been working in Devops and Software development since 2015.
 I have a Degree in Information Technology and just generally like tech and nerd stuff. I started writing this blog to help me explore new technologies and avenues of software, 
 but also as a way to help retain knowledge and showcase what I know.
 
