@@ -196,3 +196,9 @@ canonifyURLs = true
   # Email
   email            = ""
   #twitch           = "https://twitch.tv/ryterinc"
+
+[deployment]
+[[deployment.targets]]
+name = "Default"
+URL = "s3://thedevopsreport.com"
+
