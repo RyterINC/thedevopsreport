@@ -2,7 +2,7 @@
 author = "Jayson Ryter"
 categories = ["Git"]
 tags = ["Git"]
-date = "2020-02-010"
+date = "2020-02-11"
 description = "Origin? Upstream? You name it."
 linktitle = "Git Remote"
 title = "Git Part II - Git Remote"
