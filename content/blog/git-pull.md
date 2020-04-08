@@ -2,7 +2,7 @@
 author = "Jayson Ryter"
 categories = ["Git"]
 tags = ["Git"]
-date = "2020-02-17"
+date = "2020-04-07"
 description = "Can't Push Until You Pull"
 linktitle = "Git Pull"
 title = "Git Part III - Git Pull"
