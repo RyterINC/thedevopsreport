@@ -35,7 +35,7 @@ You can even pull from other remotes or forks besides origin.
 
 Git pull is an abstraction. It's the same as doing a `git fetch` and then a `git merge`, but `git pull` is a shortcut to this chain of commands. 
 
-#Anything else? 
+# Anything else? 
 
 I think a useful technique for git pull is the use of the `--rebase` option. As we said, `git pull` will perform a fetch and then a merge. Well, if you don't want
 the disgusting merge commit you could run `git pull --rebase` to perform a rebase instead. We haven't gotten into rebase yet, but basically you are taking your 
